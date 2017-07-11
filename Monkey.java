@@ -108,5 +108,13 @@ public class Monkey {
 	_monkeyNum++;
 	_id = generateId(_thisMonkeyNum);
     }
+	
+	//Add constructor to reset static monkeyNum field
+	public Monkey(int monkeyNum){
+		_monkeyNum = monkeyNum;
+		_thisMonkeyNum = _monkeyNum;
+		_monkeyNum++;
+		_id = generateId(_thisMonkeyNum);
+	}
     
 }

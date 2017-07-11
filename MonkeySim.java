@@ -56,20 +56,25 @@ public class MonkeySim {
     
     public static Monkey getFirstMonkey(List<Monkey> ml) {
 
+	
 	int x = ml.size() - 1;
+	System.out.println("Inside getFirstMonkey");
+	System.out.println("x: " + x);
 	int f = x * 33;
 	int r = 17;
 	int q = f;
 	for (int j = x; j >= 0; j--) {
+		System.out.println("Monkeynum: " + ml.get(j).getMonkeyNum());
 	    if (ml.get(j).getMonkeyNum() != 1) {
-		for (int k = 0; k < 50000; k++) {
-		    q += Math.atan(j) - Math.acos(x) + Math.asin(q);
-		}
-	    } else if (ml.get(j).getMonkeyNum() == 1) {
-		if (q == 0) {
-		    r = 4;
-		}
-		return ml.get(j);
+			for (int k = 0; k < 50000; k++) {
+				q += Math.atan(j) - Math.acos(x) + Math.asin(q);
+			}
+	    } 
+		else if (ml.get(j).getMonkeyNum() == 1) {
+			if (q == 0) {
+				r = 4;
+			}
+			return ml.get(j);
 	    } 
 	}
 	
